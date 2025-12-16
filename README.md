@@ -41,6 +41,7 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **PROGRAM**
 
+1)UP COUNTER PROGRAM:
 
     module UPCOUNTER(out,clk,rst);
 
@@ -64,6 +65,30 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
     endmodule
 
+2) DOWN COUNTER PROGRAM:
+
+       module DOWNCOUNTER(out,clk,rst);
+
+       input clk,rst; 
+
+       output reg [3:0]out;
+
+       always @ (posedge clk)
+
+       begin
+
+       if(rst)
+   
+       out<=0;
+       
+       else 
+   
+       out <= out-1;
+     
+       end
+
+       endmodule
+
 
 Developed by:MONISHWAR K  RegisterNumber: 25014914
 
@@ -74,7 +99,7 @@ Developed by:MONISHWAR K  RegisterNumber: 25014914
 ![EXP11](https://github.com/user-attachments/assets/2079570c-0b84-4c8e-abf6-6228c074b1a8)
 
 
-**TIMING DIAGRAM FOR IP COUNTER**
+**TIMING DIAGRAM FOR UP COUNTER**
 
 ![EXP11 TD](https://github.com/user-attachments/assets/d864cc1f-583d-434d-bfea-2cdd044320b8)
 
